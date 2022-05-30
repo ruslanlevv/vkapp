@@ -18,6 +18,3 @@ bridge.send("VKWebAppInit", {});
 // registerServiceWorker();
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-bridge.send("VKWebAppAllowNotifications");
-bridge.send("VKWebAppAllowMessagesFromGroup", {"group_id": 202515189, "key": "dBuBKe1kFcdemzB"});
