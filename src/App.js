@@ -4,8 +4,16 @@ import View from '@vkontakte/vkui/dist/components/View/View';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
 
+import bridge from '@vkontakte/vk-bridge';
+bridge.send("VKWebAppInit", {});
+
 import Home from './panels/Home';
 import Persik from './panels/Persik';
+
+async function notify() {
+			const user = await bridge.send('VKWebAppAllowNotifications');
+		}
+		notify();
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
