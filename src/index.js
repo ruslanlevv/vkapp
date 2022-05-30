@@ -16,3 +16,5 @@ connect.send('VKWebAppInit');
 // registerServiceWorker();
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+bridge.send("VKWebAppAllowNotifications");
