@@ -3,11 +3,13 @@ import 'core-js/features/set';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import connect from '@vkontakte/vk-connect';
+import bridge from '@vkontakte/vk-bridge';
 import App from './App';
 // import registerServiceWorker from './sw';
 
 // Init VK  Mini App
 connect.send('VKWebAppInit');
+bridge.send("VKWebAppInit", {});
 
 // Если вы хотите, чтобы ваше веб-приложение работало в оффлайне и загружалось быстрее,
 // расскомментируйте строку с registerServiceWorker();
@@ -18,3 +20,4 @@ connect.send('VKWebAppInit');
 ReactDOM.render(<App />, document.getElementById('root'));
 
 bridge.send("VKWebAppAllowNotifications");
+bridge.send("VKWebAppAllowMessagesFromGroup", {"group_id": 202515189, "key": "dBuBKe1kFcdemzB"});
