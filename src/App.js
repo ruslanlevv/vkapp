@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import connect from '@vkontakte/vk-connect';
+import bridge from '@vkontakte/vk-bridge';
 import View from '@vkontakte/vkui/dist/components/View/View';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
